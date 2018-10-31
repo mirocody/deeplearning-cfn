@@ -1,5 +1,5 @@
 {
-  "AWSTemplateFormatVersion" : "2018-10-30",
+  "AWSTemplateFormatVersion" : "2010-09-09",
   "Description" : "Launches a Deep Learning Cluster with one Master and variable number of Workers.",
   "Parameters" : {
     "KeyName" : {
