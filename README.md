@@ -147,6 +147,7 @@ localhost slots=<#GPUs>
 <worker node private ip>=<#GPUs>
 ......
 ```
-Also, you can simply calculate how many GPUs totally you will use to train the model. The total number equal to the sum of slots in each machine. For example, you have 1 master node and 2 worker nodes, and you want to use 8 GPUs in each of them, the total number of GPUs = 24.
+You can easily calculate the number of GPUs you'll use to train the model by summing up the slots available on each machine. Note that: the argument passed to the train_synthetic.sh script below is passed to -np parameter of mpirun. The -np argument represents the total number of processes and the slots argument in hostfile represents the split of those processes per machine.
+
 Then, just  run
 `./train_synthetic.sh 24`  or replace 24 with number of GPUs you use. 
